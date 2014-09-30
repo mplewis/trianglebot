@@ -16,7 +16,6 @@ def send_to_group(message):
     headers = {'content-type': 'application/json; charset=utf-8'}
     to_api = json.dumps({'bot_id': config.BOT_ID, 'text': message})
     resp = requests.post(config.API_URL, to_api, headers=headers)
-    print(to_api, repr(resp.text), resp.status_code)
 
 
 def summary_for_name(name):
