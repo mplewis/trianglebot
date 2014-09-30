@@ -36,10 +36,7 @@ def posted():
         print('Searching:', repr(query))
         message = 'Searching for "%s"...' % query
         send_to_group(message)
-        print('Sent message')
-        print(repr(summary_for_name(query)))
         send_to_group(summary_for_name(query))
-        print('Sent final')
         return ''
     else:
         print('Ignored:  ', repr(text))
