@@ -19,3 +19,6 @@ WORKSHEETS_TO_SCRAPE = ['actives', 'pledges']
 # Leave this as is. It picks the keys from your list of pretty sheet names.
 WORKSHEET_KEYS_TO_SCRAPE = [WORKSHEET_KEYS[w]
                             for w in WORKSHEETS_TO_SCRAPE]
+
+# Redirect HTTP GET requests pointed at / to this address
+INDEX_REDIRECT_URL = 'https://github.com/mplewis/trianglebot'

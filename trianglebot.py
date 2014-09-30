@@ -4,7 +4,7 @@ import config
 import sheets_api
 
 import requests
-from flask import Flask, request
+from flask import Flask, request, redirect
 
 import json
 
@@ -44,6 +44,11 @@ def posted():
     else:
         print('Ignored:  ', repr(text))
         return ''
+
+
+@app.route('/', methods=['GET'])
+def about_me():
+    return redirect(config.INDEX_REDIRECT_URL)
 
 
 if __name__ == '__main__':
