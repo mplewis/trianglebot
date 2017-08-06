@@ -15,6 +15,7 @@ app = Flask(__name__)
 def send_to_group(message):
     headers = {'content-type': 'application/json; charset=utf-8'}
     to_api = json.dumps({'bot_id': config.BOT_ID, 'text': message})
+    print('Posting to {}'.format(config.API_URL))
     requests.post(config.API_URL, to_api, headers=headers)
 
 
