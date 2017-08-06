@@ -1,0 +1,24 @@
+{
+  "name": "Trianglebot",
+  "description": "Pull contact info from a Google Sheet and serve it to Groupme on demand. Built for http://triangleumn.com",
+  "env": {
+    "GROUPME_BOT_ID": {
+      "description": "Your Groupme bot ID. Get this at https://dev.groupme.com/bots"
+    },
+    "BOT_NAME": {
+      "description": "The name the bot will listen for when performing searches.",
+      "value": "cortana"
+    },
+    "DOCUMENT_KEY": {
+      "description": "The ID of the Google Sheets document with your data. You can find the key in your browser's URL: https://docs.google.com/spreadsheets/d/<THIS_PART_IS_YOUR_DOCUMENT_KEY>/edit"
+    },
+    "WORKSHEET_KEYS": {
+      "description": "The keys for the worksheets to read from, comma separated. Example: \"od6,od4,od7\". od6 is the default sheet. Learn more: http://damolab.blogspot.com/2011/03/od6-and-finding-other-worksheet-ids.html",
+      "value": "od6"
+    },
+    "HOMEPAGE": {
+      "description": "Redirect HTTP GET requests to this URL.",
+      "value": "https://github.com/mplewis/trianglebot"
+    }
+  }
+}
