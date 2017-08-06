@@ -8,7 +8,7 @@ API_URL = 'https://api.groupme.com/v3/bots/post'
 SHEET_BASE_URL = ('https://spreadsheets.google.com/feeds/cells/%s/%s'
                   '/public/values?alt=json')
 
-SHEET_ID_MATCHER = r'spreadsheets\/d\/(.+)\/'
+SHEET_ID_MATCHER = r'spreadsheets\/d\/(.+)\/?'
 
 # Set by Heroku variables
 COMMAND_PREFIX = environ['BOT_NAME'] + ' '

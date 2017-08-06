@@ -29,17 +29,16 @@ def posted():
     data = request.get_json()
     text = data['text']
     clean = text.lower().strip()
-    if clean.startswith(config.COMMAND_PREFIX):
-        split_point = len(config.COMMAND_PREFIX)
-        query = text[split_point:].strip()
-        print('Searching:', repr(query))
-        message = 'Searching for "%s"...' % query
-        send_to_group(message)
-        send_to_group(summary_for_name(query))
-        return ''
-    else:
+    if not clean.startswith(config.COMMAND_PREFIX.lower()):
         print('Ignored:  ', repr(text))
         return ''
+    split_point = len(config.COMMAND_PREFIX)
+    query = text[split_point:].strip()
+    print('Searching:', repr(query))
+    message = 'Searching for "%s"...' % query
+    send_to_group(message)
+    send_to_group(summary_for_name(query))
+    return ''
 
 
 @app.route('/', methods=['GET'])
