@@ -1,13 +1,13 @@
 {
   "name": "Trianglebot",
-  "description": "Pull contact info from a Google Sheet and serve it to Groupme on demand. Built for http://triangleumn.com",
+  "description": "Pull contact info from a Google Sheet and serve it to Groupme on demand. Built for http://triangleumn.com.",
   "env": {
     "GROUPME_BOT_ID": {
-      "description": "Your Groupme bot ID. Get this at https://dev.groupme.com/bots"
+      "description": "Your Groupme bot ID. Get this at https://dev.groupme.com/bots."
     },
     "BOT_NAME": {
-      "description": "The name the bot will listen for when performing searches.",
-      "value": "cortana"
+      "description": "The name the bot will listen for when performing searches. Case-insensitive.",
+      "value": "Cortana"
     },
     "DOCUMENT_KEY": {
       "description": "The ID of the Google Sheets document with your data. You can find the key in your browser's URL: https://docs.google.com/spreadsheets/d/<THIS_PART_IS_YOUR_DOCUMENT_KEY>/edit"
