@@ -88,6 +88,7 @@ def worksheet_keys_to_rows(keys):
     for worksheet_key in keys:
         SHEET_URL = (config.SHEET_BASE_URL %
                      (config.SHEET_KEY, worksheet_key))
+        print('Fetching from {}'.format(SHEET_URL))
         data = requests.get(SHEET_URL).json()
         cells = json_to_cell_matrix(data)
         partial_rows = rows_from_cell_matrix(cells)
